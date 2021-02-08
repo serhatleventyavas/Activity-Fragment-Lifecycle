@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.ActivityLifecycleWorkshop.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.ActivityLifecycleWorkshop.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_main_mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <FrameLayout
+            android:id="@+id/activity_main_subMainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@android:color/holo_red_dark"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/activity_main_subMainContainer2"
+            android:layout_below="@id/activity_main_subMainContainer"
+            android:background="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/activity_main_subMainContainer3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_below="@id/activity_main_subMainContainer2"/>
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/activity_main_buttonClick"
+            android:layout_width="200dp"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:text="Fragment Yükle"/>
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/activity_main_buttonClick2"
+            android:layout_width="200dp"
+            android:layout_alignParentEnd="true"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:text="Fragmentleri Değiştir"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
